@@ -22,6 +22,14 @@ NeoBundle 'alpaca-tc/alpaca_powertabline'
 NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
 NeoBundle 'Lokaltog/powerline-fontpatcher'
 
+" ------ For Trailing-whitspace
+NeoBundle 'bronson/vim-trailing-whitespace'
+
+" ------ For Gitgutter
+NeoBundle 'airblade/vim-gitgutter'
+
+" ------ For Supertab
+NeoBundle 'ervandew/supertab'
 
 call neobundle#end()
 
