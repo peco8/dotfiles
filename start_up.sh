@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# Set up for Vim
 ln ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.gvimrc ~/.gvimrc
 ln -sf ~/dotfiles/.vim ~/.vim
