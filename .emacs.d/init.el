@@ -591,3 +591,5 @@ install the memoized function over the original function."
 
 ;;; powerline.el ends here
 
+;; Deleting traring space and blank lines
+(add-hook 'before-save-hook 'delete-trailing-whitespace 'delete-blank-lines)
