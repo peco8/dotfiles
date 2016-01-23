@@ -46,14 +46,10 @@
 ;; " yes or no " => " y or n "
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; Disable beep
-(defun my-bell-function ()
-  (unless (memq this-command
-		'(isearch-abort abort-recursive-edit exit-minibuffer
-				keyboard-quit mwheel-scroll down up next-line previous-line
-				backward-char forward-char))
-    (ding)))
-(setq ring-bell-function 'my-bell-function)
+;; Disable beep and flash
+(setq ring-bell-function 'ignore)
+
+;; Enlight Trailing white space
 
 ;; Chagne option to meta
 (setq mac-option-modifier 'meta)
