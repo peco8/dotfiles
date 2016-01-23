@@ -31,7 +31,7 @@
 (show-paren-mode 1)
 
 ;; Theme
-(load-theme 'manoj-dark t)		
+(load-theme 'manoj-dark t)
 
 ;; Scroll by each line
 (setq scroll-conservatively 1)
@@ -91,8 +91,8 @@
 ;;        powerline tries to output something unexpected, it won't
 ;;        just fail and flail-barf.  (JonathanArkell)
 ;; v1.2 - Fixed the Guard Clause to not just sit there and message like mad
-;;        When a list is encountered, it is interpreted as a mode line. Fixes 
-;;        problems with shell mode and nXhtml mode. 
+;;        When a list is encountered, it is interpreted as a mode line. Fixes
+;;        problems with shell mode and nXhtml mode.
 
 ;;; Code:
 
@@ -461,7 +461,7 @@ install the memoized function over the original function."
      (powerline-make side
                      (let ((result ,string))
 					   (cond ((listp result)
-							  (format-mode-line result)) 
+							  (format-mode-line result))
 							 ((not (or (stringp result)
 									   (null result)))
 							  (progn
