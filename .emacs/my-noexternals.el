@@ -24,6 +24,9 @@
 ;; Diable to create auto-save files
 (setq auto-save-default nil)
 
+;; Disable to autos-save list files
+(setq auto-save-list-file-prefix nil)
+
 ;; Enlight the opposite cursor
 (show-paren-mode 1)
 
