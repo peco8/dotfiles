@@ -1,5 +1,10 @@
+# Vim
 .vim/bundle/
 .vim/tmp/
 .vim/.netrwhist
 
-.emacs.d/ac-comphist.dat
+# Emacs
+.emacs/ac-comphist.dat  # for auto-complete
+.emacs/abbrev_defs
+.emacs/elpa/
+.emacs/el-get/
