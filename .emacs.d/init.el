@@ -28,6 +28,10 @@
 ;; magit
 (el-get-bundle magit)
 
+;; nyan mode
+(el-get-bundle nyan-mode)
+(nyan-mode 1)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (add-hook 'after-init-hook '(lambda ()
