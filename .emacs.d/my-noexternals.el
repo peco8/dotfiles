@@ -81,6 +81,9 @@
 (set-face-foreground 'mode-line-inactive "gray30")
 (set-face-background 'mode-line-inactive "gray85")
 
+;; Add color fo mode line for file name
+(set-face-attribute 'mode-line-buffer-id nil :foreground "black")
+
 ;;;;;;;;;;;;;;;;;;
 ;;; Keybindings
 ;;;;;;;;;;;;;;;;;;
