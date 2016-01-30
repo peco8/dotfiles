@@ -22,7 +22,7 @@
 (setq make-backup-files nil)
 
 ;; Diable to create auto-save files
-(setq delete-auto-save-files nil)
+(setq auto-save-default nil)
 
 ;; Enlight the opposite cursor
 (show-paren-mode 1)
