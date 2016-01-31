@@ -1,5 +1,6 @@
 if has('vim_starting')
   set nocompatible               " Be iMproved
+  syntax on 		 " Turn on color syntax
 
   " Required:
   set runtimepath+=~/.vim/bundle/neobundle.vim/
