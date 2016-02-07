@@ -15,9 +15,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
 
-" ------ For NerdTree
-NeoBundle 'scrooloose/nerdtree'
-
 " ------ For Powerline
 NeoBundle 'alpaca-tc/alpaca_powertabline'
 NeoBundle 'Lokaltog/powerline', { 'rtp' : 'powerline/bindings/vim'}
@@ -28,9 +25,6 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 
 " ------ For Gitgutter
 NeoBundle 'airblade/vim-gitgutter'
-
-" ------ For Supertab
-NeoBundle 'ervandew/supertab'
 
 call neobundle#end()
 
