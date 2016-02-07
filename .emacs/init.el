@@ -32,6 +32,10 @@
 (el-get-bundle nyan-mode)
 (nyan-mode 1)
 
+;; org-bullets
+(el-get-bundle org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (add-hook 'after-init-hook '(lambda ()
