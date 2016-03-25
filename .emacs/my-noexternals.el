@@ -47,6 +47,10 @@
 ;; Deleting traring space and blank lines
 (add-hook 'before-save-hook 'delete-trailing-whitespace 'delete-blank-lines)
 
+;; Word ( line ) wrap
+(global-visual-line-mode t)
+(setq-default word-wrap t)
+
 ;;;;;;;;;;;;;;;;;;
 ;;; Design
 ;;;;;;;;;;;;;;;;;;
@@ -62,7 +66,35 @@
         (tool-bar-mode 0))
 
 ;; Theme
-(load-theme 'manoj-dark t)
+;; (load-theme 'manoj-dark t)
+(defun color-theme-all-hallows-eve ()
+(interactive)
+(color-theme-install
+ '(color-theme-all-hallows-eve
+   ((background-color . "#070707")
+    (background-mode . dark)
+    (cursor-color . "#73597E")
+    (foreground-color . "#fff"))
+   (default ((t nil)))
+   (bold ((t (:bold t))))
+   (bold-italic ((t (:italic t :bold t))))
+   (font-lock-builtin-face ((t (:foreground "white"))))
+   (font-lock-comment-face ((t (:foreground "#9933CC" :italic t))))
+   (font-lock-constant-face ((t (:foreground "#3387CC"))))
+   (font-lock-doc-string-face ((t (:foreground "red"))))
+   (font-lock-function-name-face ((t (:foreground "white"))))
+   (font-lock-keyword-face ((t (:foreground "#CC7833"))))
+   (font-lock-preprocessor-face ((t (:foreground "#CC7833"))))
+   (font-lock-reference-face ((t (:foreground "red"))))
+   (font-lock-string-face ((t (:foreground "#66CC33"))))
+   (font-lock-type-face ((t (:foreground "red" :italic t))))
+   (font-lock-variable-name-face ((t (:foreground "white"))))
+   (font-lock-warning-face ((t (:foreground "red"))))
+   (highlight ((t (:background "#222"))))
+   (italic ((t (:italic t))))
+   (js2-function-param-face ((t (:foreground "white" :italic t))))
+   (underline ((t (:underline t)))))))
+(color-theme-all-hallows-eve)
 
 ;; Change the mini buffer color
 (face-spec-set 'minibuffer-prompt
@@ -96,3 +128,20 @@
 (global-set-key (kbd "C-c C-k") 'windmove-down)
 (global-set-key (kbd "C-c C-l") 'windmove-up)
 (global-set-key (kbd "C-c C-;") 'windmove-right)
+
+
+;;;;;;;;;;;;;;;;;;
+;;; Ruby Environment
+;;;;;;;;;;;;;;;;;;
+(autoload 'ruby-mode "ruby-mode"
+	    "Mode for editing ruby source files" t)
+(add-to-list 'auto-mode-alist '("\\.rb$latex " . ruby-mode))
+(add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
+;; smart-compile
+(setq compilation-window-height 15) ;; default window height is 16
+(add-hook 'ruby-mode-hook
+          '(lambda ()
+             (define-key ruby-mode-map (kbd "C-c c") 'smart-compile),
+		(define-key ruby-mode-map (kbd "C-c C-c") (kbd "C-c c C-m"))))
+(add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))

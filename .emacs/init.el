@@ -36,6 +36,26 @@
 (el-get-bundle org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
+;; color-theme
+(el-get-bundle color-theme)
+
+;;; Ruby
+;; smart-compile
+(el-get-bundle smart-compile)
+(setq compilation-window-height 15) ;; default window height is 16
+
+;; ruby-electric
+(el-get-bundle ruby-electric)
+(require 'ruby-electric)
+(ruby-electric-mode t)
+;(setq ruby-electric-expand-delimiters-list nil)
+
+;; ruby-block
+(el-get-bundle ruby-block)
+(require 'ruby-block)
+(ruby-block-mode t)
+(setq ruby-block-highlight-toggle t)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (add-hook 'after-init-hook '(lambda ()
