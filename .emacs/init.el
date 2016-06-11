@@ -39,6 +39,12 @@
 ;; color-theme
 (el-get-bundle color-theme)
 
+;; exec-path-from-shell
+;; Fixed => Ever find that a command works in your shell, but not in Emacs?
+(el-get-bundle exec-path-from-shell)
+(when (memq window-system '(mac ns))
+   (exec-path-from-shell-initialize))
+
 ;;; Ruby
 ;; smart-compile
 (el-get-bundle smart-compile)

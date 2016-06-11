@@ -1,4 +1,10 @@
 ;;;;;;;;;;;;;;;;;;
+;;; Add load-path
+;;;;;;;;;;;;;;;;;;
+; You can add any of your own customized scripts in here.
+(add-to-list 'load-path "~/.emacs.d/my-extensions")
+
+;;;;;;;;;;;;;;;;;;
 ;;; Character code
 ;;;;;;;;;;;;;;;;;;
 
@@ -138,6 +144,15 @@
 (add-to-list 'auto-mode-alist '("\\.rb$latex " . ruby-mode))
 (add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
+
+;; Xmpfilter
+;; (add-to-list 'load-path "~/.emacs.d/site-lisp")
+; (load "~/.emacs.d/site-lisp/rcodetools.el")
+; (load "rcodetools.el")
+; (add-to-list 'load-path (expand-file-name "~/.emacs.d/my-extensions"))
+(require 'rcodetools)
+(define-key ruby-mode-map (kbd "C-c C-c") 'xmp)
+
 ;; smart-compile
 (setq compilation-window-height 15) ;; default window height is 16
 (add-hook 'ruby-mode-hook
