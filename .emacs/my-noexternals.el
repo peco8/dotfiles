@@ -146,17 +146,9 @@
 (add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
 
 ;; Xmpfilter
-;; (add-to-list 'load-path "~/.emacs.d/site-lisp")
-; (load "~/.emacs.d/site-lisp/rcodetools.el")
-; (load "rcodetools.el")
-; (add-to-list 'load-path (expand-file-name "~/.emacs.d/my-extensions"))
 (require 'rcodetools)
 (define-key ruby-mode-map (kbd "C-c C-c") 'xmp)
 
 ;; smart-compile
 (setq compilation-window-height 15) ;; default window height is 16
-(add-hook 'ruby-mode-hook
-          '(lambda ()
-             (define-key ruby-mode-map (kbd "C-c c") 'smart-compile),
-		(define-key ruby-mode-map (kbd "C-c C-c") (kbd "C-c c C-m"))))
 (add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
