@@ -25,6 +25,9 @@ NeoBundle 'bronson/vim-trailing-whitespace'
 " ------ For Gitgutter
 NeoBundle 'airblade/vim-gitgutter'
 
+" ------ For Tabular
+NeoBundle 'godlygeek/tabular'
+
 call neobundle#end()
 
 " Required:
