@@ -6,6 +6,9 @@
 
 ### Emacs
 
+# for cache
+.emacs/url/cache/
+
 # for auto-complete
 .emacs/ac-comphist.dat
 
